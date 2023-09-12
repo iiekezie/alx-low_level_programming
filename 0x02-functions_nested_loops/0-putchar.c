@@ -1,21 +1,20 @@
 #include "main.h"
-	/**
-	 * main - print _putchar
-	 * is written by mbah
-	 * Return: 0
-	 */
 
+/**
+ * main - Prints Putchar as a message.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int str[] = {72, 111, 108, 98, 101, 114, 116, 111, 110};
+	int count, sz;
 
-	int main(void)
+	sz = sizeof(str) / sizeof(int);
+	for (count = 0; count < sz; count++)
 	{
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
+		_putchar(str[count]);
+	}
 	_putchar('\n');
 	return (0);
-	}
+}
