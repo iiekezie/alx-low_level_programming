@@ -2,7 +2,7 @@
 
 Project done during **Full Stack Software Engineering studies** at **ALX School**. It aims to learn about C - More Pointers, Arrays and Strings **C language**.
 
-##  General Requirements `C - Debugging`
+##  General Requirements `C - More Pointers, Arrays and Strings`
 * Allowed editors: vi, vim, emacs
 * All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 * All your files should end with a new line
