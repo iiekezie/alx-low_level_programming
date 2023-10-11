@@ -1,8 +1,3 @@
-/*
- * File: 0-print_name.c
- * Auth: Ifeanyi I Ekezie
- */
-
 #include "function_pointers.h"
 #include <stdio.h>
 /**
