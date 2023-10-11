@@ -4,17 +4,21 @@
  */
 
 #include "function_pointers.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * print_name - Print a name from a function pointer
- * @name: char string
- * @f: function pointer that takes a string argument
+ * print_name - function that prints a name
+ * @name: name of the person
+ * @f: Pointer to function
+ *
  */
-
 void print_name(char *name, void (*f)(char *))
+ /*pointer to function */
 {
-	if (name == NULL || f == NULL)
+	if (!f) /* if the function exist do it */
 		return;
 
-	f(name);
+	f(name); /*invoque the function that prints a name */
+		/*execute it */
 }
