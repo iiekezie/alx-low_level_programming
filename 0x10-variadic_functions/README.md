@@ -1,6 +1,6 @@
 ## 0x0F. C - Variadic functions ##
 
-Project done during **Full Stack Software Engineering studies** at **ALX LOW LEVEL PROGRAMMING School**. It aims to learn about C - Variadic functions Project in **C language**.
+Project done during **Full Stack Software Engineering studies** at **ALX LOW LEVEL PROGRAMMING SCHOOL**. It aims to learn about C - Variadic functions Project in **C language**.
 
 ## Technologies
 * Scripts written in Bash 4.3.11(1)
