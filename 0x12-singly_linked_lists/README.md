@@ -11,8 +11,8 @@ Project done during **Full Stack Software Engineering studies** at **ALX LOW LEV
 ## Files
 All of the following files are scripts and programs written in C:
 
-| Type/File                  | Definition  |Prototype                                                           |
-| -------------------------- | -------------------------------------------------------------------------------- |
+| Type/File                  |   Definition                     |Prototype                                      |
+| -------------------------- | -------------------------------- |---------------------------------------------- |
 |`0-print_list.c` |	`Prints all elements of a list_t list.`	| size_t print_list(const list_t *h); |
 |`1-list_len.c` |	`Returns the number of elements in a list_t list.` |	size_t list_len(const list_t *h); |
 |`2-add_node.c` |	`Adds a new node at the beginning of a list_t list.` |	list_t *add_node(list_t **head, const char *str); |
