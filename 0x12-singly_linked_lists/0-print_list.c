@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stddef.h>
 #include "lists.h"
+#include <string.h>
 
 /*
- * File: 2-add_node.c
+ * File: 0-print_list.c
  * Auth: Ifeanyi I Ekezie
  */
 
