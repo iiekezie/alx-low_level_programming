@@ -1,44 +1,36 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "lists.h"
 
-/*
- * File: 101-print_listint_safe.c
- * Auth: Ifeanyi I Ekezie
- */
-
 /**
- * print_listint_safe - Prints a listint_t linked list safely.
- * @head: A pointer to the head of the list.
+ * print_listint_safe - Prints a listint_t list safely.
+ * @head: A pointer to the head of the listint_t list.
+ *
  * Return: The number of nodes in the list.
  */
-size_t print_listint_safe(const listint_t *head);
+size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *slow_node = NULL;
-	const listint_t *l_n = NULL;
+	const listint_t *current = head;
+	const listint_t *visited[1024]; /* Assuming a limit of 1024 unique nodes */
 	size_t count = 0;
-	size_t new_node1;
+	size_t i;
 
-	slow_node = head;
-	while (slow_node)
+	for (i = 0; i < 1024; i++)
+		visited[i] = NULL;
+
+	while (current != NULL)
 	{
-		printf("[%p] %d\n", (void *)slow_node, slow_node->n);
-		count++;
-		slow_node = slow_node->next;
-		l_n = head;
-		new_node1 = 0;
-		while (new_node1 < count)
+		for (i = 0; i < count; i++)
 		{
-			if (slow_node == l_n)
+			if (visited[i] == current)
 			{
-				printf("-> [%p] %d\n", (void *)slow_node, slow_node->n);
-				return (count);
+				printf("-> [%p] %d\n", (void *)current, current->n);
+				exit(98);
 			}
-			l_n = l_n->next;
-			new_node1++;
 		}
-		if (!head)
-			exit(98);
+
+		visited[count++] = current;
+		printf("[%p] %d\n", (void *)current, current->n);
+		current = current->next;
 	}
+
 	return (count);
 }
