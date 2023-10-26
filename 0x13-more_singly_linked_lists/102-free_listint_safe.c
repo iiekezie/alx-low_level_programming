@@ -1,46 +1,35 @@
-#include "lists.h"
-#include <stdlib.h>
-
-/*
+/**
  * File: 102-free_listint_safe.c
- * Auth: Ifeanyi I Ekezie
+ * Auth: Ifeanyi I. Ekezie
  */
+
+#include "lists.h"
 
 /**
- * free_listint_safe - Safely frees a listint_t list
- * @h: A pointer to the head of the list
- * Return: The size of the list that was freed
+ * free_listint_safe - Frees a listint_t linked list safely.
+ * @h: A pointer to a pointer to the head of the list.
+ *
+ * Return: The number of nodes freed.
  */
-
-size_t free_listint_safe(listint_t **h);
+size_t free_listint_safe(listint_t **h)
 {
-	listint_t *temp;
-	size_t counter = 0;
-	int differ;
+	listint_t *current, *temp;
+	size_t count = 0;
 
-	if (!h || !*h)
+	if (h == NULL || *h == NULL)
 		return (0);
 
-	while (*h)
+	current = *h;
+	while (current)
 	{
-		differ = *h - (*h)->next;
-		if (differ > 0)
-		{
-			temp = (*h)->next;
-			free(*h);
-			*h = temp;
-			counter++;
-		}
-		else
-		{
-			free(*h);
-			*h = NULL;
-			counter++;
+		count++;
+		temp = current;
+		current = current->next;
+		free(temp);
+		if (temp < current)
 			break;
-		}
 	}
 
 	*h = NULL;
-
-	return (counter);
+	return (count);
 }
