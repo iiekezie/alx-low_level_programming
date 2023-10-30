@@ -2,7 +2,7 @@
 
 Full Stack Software Engineering studies at **ALX LOW LEVEL PROGRAMMING School**. It aims to learn about File I/O in C - Project in **C language**.
 
-# This project consists of several C programs that involve **file I/O operations**. The programs perform tasks like reading a text file, creating a file, appending text to a file, and displaying information from the ELF header of an ELF file. Below is a table that summarizes each program in the project:
+This project consists of several C programs that involve **file I/O operations**. The programs perform tasks like reading a text file, creating a file, appending text to a file, and displaying information from the ELF header of an ELF file. Below is a table that summarizes each program in the project:
 
 
 ## Project Details
