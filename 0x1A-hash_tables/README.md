@@ -21,7 +21,7 @@ This project involves implementing hash tables in C, covering topics such as has
     - [Task 5: hash_table_print](#task-5-hash_table_print)
     - [Task 6: hash_table_delete](#task-6-hash_table_delete)
     - [Task 7: Sorted Hash Tables](#task-7-sorted-hash-tables)
-4. [Author] black_nib:
+5. [Author](#author)
 
 ## Technologies
 - C programming language
@@ -166,6 +166,7 @@ int main(void)
     s = "cisfun";
     printf("%lu\n", hash_djb2((unsigned char *)s));
     s =
+
 
 ## Author :black_nib:
 
