@@ -166,7 +166,7 @@ int main(void)
     s = "cisfun";
     printf("%lu\n", hash_djb2((unsigned char *)s));
     s =
-
+```
 
 ## Author :black_nib:
 
