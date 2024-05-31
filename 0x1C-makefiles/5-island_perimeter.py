@@ -16,34 +16,27 @@ def island_perimeter(grid):
     """
     perimeter = 0
     rows = len(grid)
-    cols = len(grid[0])
+    cols = len(grid[0]) if rows > 0 else 0
 
     for i in range(rows):
         for j in range(cols):
             if grid[i][j] == 1:
-                # Check for top
-                if i == 0 or grid[i - 1][j] == 0:
-                    perimeter += 1
-                # Check for bottom
-                if i == rows - 1 or grid[i + 1][j] == 0:
-                    perimeter += 1
-                # Check for left
-                if j == 0 or grid[i][j - 1] == 0:
-                    perimeter += 1
-                # Check for right
-                if j == cols - 1 or grid[i][j + 1] == 0:
-                    perimeter += 1
+                # Each land cell contributes 4 to perimeter
+                perimeter += 4
+                # Check adjacent cells to subtract shared edges
+                if i > 0 and grid[i-1][j] == 1:
+                    perimeter -= 2
+                if j > 0 and grid[i][j-1] == 1:
+                    perimeter -= 2
 
     return perimeter
 
-# Uncomment the following lines to test the function with the given example
-"""
-grid = [
-    [0, 0, 0, 0, 0, 0],
-    [0, 1, 0, 0, 0, 0],
-    [0, 1, 0, 0, 0, 0],
-    [0, 1, 1, 1, 0, 0],
-    [0, 0, 0, 0, 0, 0]
-]
-print(island_perimeter(grid))
-"""
+if __name__ == "__main__":
+    grid = [
+        [0, 0, 0, 0, 0, 0],
+        [0, 1, 0, 0, 0, 0],
+        [0, 1, 0, 0, 0, 0],
+        [0, 1, 1, 1, 0, 0],
+        [0, 0, 0, 0, 0, 0]
+    ]
+    print(island_perimeter(grid))
